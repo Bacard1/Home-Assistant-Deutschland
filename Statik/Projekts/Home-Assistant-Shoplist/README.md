@@ -1,50 +1,50 @@
-<h1 align="center">Списък за пазаруване с изображения</h1>
+<h1 align="center">Bildeinkaufsliste</h1>
 
 <br>
 
-##  Подготовка:
-- Инсталирайте следните пакети от HACS или посетете хранилищата на следните линкове 🔽:
+##  Vorbereitung:
+- Installieren Sie die folgenden Pakete von HACs oder besuchen Sie die Repositorys der folgenden Links 🔽:
   - [Local Conditional card](https://github.com/PiotrMachowski/Home-Assistant-Lovelace-Local-Conditional-card)
   - [Vertical Stack In Card](https://github.com/ofekashery/vertical-stack-in-card)
   - [mini-graph-card](https://github.com/kalkih/mini-graph-card)
 
-  След инсталацията на пакетите рестартирайте своят Home Assistant и преминете към следващите стъпки 🔽:
+  Starten Sie nach der Installation der Pakete Ihren Heimassistenten und wechseln Sie mit den nächsten Schritten 🔽:
 
-## Създаване:
-- **Създаване на нов списък:** създайте нов списък към, който ще препращате имената на натиснатите от Вас артикули. 🔽:
+## Schaffung:
+- **Erstellen Sie eine neue Liste: ** Erstellen Sie eine neue Liste, an die Sie die Namen der von Ihnen gedrückten Elemente weiterleiten.🔽::
   
   <img align="center" src="https://github.com/Bacard1/HomeAssistant-Bulgaria/blob/main/Statik/IMG/GIF/create_list.gif?raw=true">      
 
-- **Табло Shoplist:** Създайте ново Табло с името "Shoplist" и там ще създадем всички необходими списъци. 🔽:
+- **Shoplist Dashboard: ** Erstellen Sie ein neues Panel mit dem Namen "ShopList". Dort erstellen wir alle erforderlichen Listen.🔽::
 
 
   <img align="center" src="https://github.com/Bacard1/HomeAssistant-Bulgaria/blob/main/Statik/IMG/GIF/create_shoplist_dashboard.gif?raw=true">  
   
-  - Добавете, като нова карта списъкът, който ще използвате. 🔽:
+  - Fügen Sie als neue Karte die Liste hinzu, die Sie verwenden werden.🔽::
     
     ![image](https://github.com/user-attachments/assets/62fe909f-7019-4958-8b1c-4187b441959a)
 
-    Ръчно добавяне на карта 🔽:
+    Handbuch hinzufügen Karte 🔽:
     
     🛠️
     
         type: todo-list
         entity: todo.list
 
-  - **Артикули:** неоходимо е еднократно създаване на "Помощник Бутон", който ще използваме за добавянето на артикулите. Не е необходимо създаването за всеки един артикул, понеже така или иначе не е възможно натискането на няколко артикула едновременно. Бутонът позволява при всяко добавяне да се правят индивидуални промени. 🔽:
+  - **Elemente:** Es ist eine einköpfige Erstellung einer "Assistenz -Schaltfläche", mit der wir die Elemente hinzufügen werden.Es ist nicht notwendig, für jeden zu erstellenArtikel, da es nicht möglich ist, mehrere Elemente gleichzeitig zu drücken.Die Taste ermöglicht jedes Hinzufügen individueller Änderungen.🔽::
 
     ![image](https://github.com/Bacard1/HomeAssistant-Bulgaria/blob/main/Statik/IMG/GIF/create_button_helper.gif?raw=true)
     
    
-  - **Категории:** за всяка една категоря е необходимо да се създаде помощник. Ако използвате един и същ помощник за всички категории, при отваряне на една категория, ще се отварят и всички други. Като удобство, ще добавим и автоматизация, която ще затваря всички останали категории при отваряне на категория. 🔽:
+  - **Kategorien:** Für jede Kategorie ist es erforderlich, einen Assistenten zu erstellen.Wenn Sie beim Öffnen einer Kategorie den gleichen Helfer für alle Kategorien verwenden,Jeder wird sich öffnen.In Komfort werden wir auch Automatisierung hinzufügen, die beim Öffnen einer Kategorie alle anderen Kategorien schließt.🔽::
     
     ![image](https://github.com/Bacard1/HomeAssistant-Bulgaria/blob/main/Statik/IMG/GIF/create_Namenskategorie_helpers.gif?raw=true)
 
-    След създаването на помощникът за категорията, я добавете като карта в таблото. 🔽:
+    Fügen Sie ihn nach dem Erstellen des Helfers für die Kategorie als Karte im Dashboard hinzu.🔽::
 
     ![image](https://github.com/Bacard1/HomeAssistant-Bulgaria/blob/main/Statik/IMG/GIF/shoplist_und_kategodie.gif?raw=true)
 
-    Ръчно добавяне на карта 🔽:
+    Handbuch hinzufügen Karte 🔽:
 
     🛠️
     
@@ -95,19 +95,19 @@
               border: 2; 
             }
     
-      ⚠️ Вкарайте картата с кодът точно така както е даден, като замените само "- entity: input_boolean.namenskategorie" с името на помошникът (категория). След като го запазите, можете лесно да промените останалите работи през графиката на картата или да добавите нов артикул. 🔽:
+      ⚠️ Fügen Sie die Kartenkarte genau so ein, wie sie angegeben wird, und ersetzen Sie nur "- Entity: input_boolean.namenskategorie" durch den Namen der Hilfe (Kategorie).Sobald Sie es gespeichert haben, können Sie den Rest der Kartengrafiken problemlos ändern oder ein neues Element hinzufügen. 🔽:
   
   
       ![image](https://github.com/Bacard1/HomeAssistant-Bulgaria/blob/main/Statik/IMG/GIF/kategorie_card_edit.gif?raw=true)
     
-  - [ТУК](https://github.com/Bacard1/HomeAssistant-Bulgaria/tree/main/Statik/Projekts/Home-Assistant-Shoplist/IMG) ще намерите изчерпателна колекция от изображения за вашият списък за пазаруване, разделени по категории.
+  - [Hier](https://github.com/Bacard1/HomeAssistant-Bulgaria/tree/main/Statik/Projekts/Home-Assistant-Shoplist/IMG) Sie finden eine umfassende Sammlung von Bildern für Ihre Einkaufsliste, geteilt nach Kategorie.
 <br>
 
-##  Автоматизации:
+##  Automatisierung:
 
-  ⚠️ Автоматизациите по долу не са задължителни, а препоръчителни. Липсата им няма да попречи на работата на списъкът за пазаруване, но ще я улесни.
+  ⚠️ Die folgende Automatisierung ist optional, aber empfohlen.Ihr Mangel wird die Arbeit der Einkaufsliste nicht beeinträchtigen, aber es wird es einfacher machen.
 
-- **1. Следи за вече отметнати продукти и активира чистача. 🔽:**
+- **1. Es überwacht die bereits entfernten Produkte und aktiviert den Reiniger.🔽:**
 
    🛠️
   ```html  
@@ -131,7 +131,7 @@
       action: automation.trigger
   ```
 
-- **2. Чистач на списък с отметнати продукти -** тази автоматизация ще изчиства всички отметнати продукти след престой от 10 минути. Това не ви ангажира и обърква при ежедневна употреба. 🔽:
+- **2. Reiniger einer Liste entfernter Produkte -** Diese Automatisierung reinigt alle Produkte, die Sie nach einem 10 -minütigen Aufenthalt entsorgt haben.Dies engagiert Sie nicht und verwirrt Sie mit dem täglichen Gebrauch. 🔽:
 
    🛠️
   ```html
@@ -163,9 +163,9 @@
       action: shopping_list.clear_completed_items
   ```
 
-  ⚠️ Автоматизации 1 и 2 вървят комлект понеже едната активира другата!
+  ⚠️ Automatisierung 1 und 2 werden beiseite gelegt, weil einer die andere aktiviert!
 
-- **3. Само една отворена категория:** тази автоматизация не позволява отварянето на повече от една категория. При отваряне на категория, всички останали се затварят. 🔽:
+- **3. Nur eine offene Kategorie:** Diese Automatisierung erlaubt nicht mehr als eine Kategorie.Beim Öffnen einer Kategorie schließen sich alle anderen. 🔽:
 
    🛠️
   ```html
@@ -190,7 +190,7 @@
   mode: single
   ```
   
-- **4. Нов артикул в списъкът за пазаруване:** изпраща известие до всички мобилни устройства за добавянето на нов артикул към списъкът.🔽:
+- **4. Ein neuer Artikel auf der Einkaufsliste:** Sendet eine Benachrichtigung an alle mobilen Geräte, um einer Liste ein neues Element hinzuzufügenт.🔽:
 
   🛠️
   ```html

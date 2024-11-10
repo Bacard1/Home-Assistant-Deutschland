@@ -1,43 +1,43 @@
-<h1 align="center">Създаване/Интегриране на Zigbee мрежа в Home Assistant</h1>
+<h1 align="center">Erstellen/Integration des Zigbee -Netzwerks im Heimassistenten</h1>
 
 <br>
 
-##  Хардуерна подготовка:
+##  Hardware:
 
-- Инсталиран и конфигуриран Home Assistant OS на хардуер или като виртуална машина е без значение. Ато не сте готови с тази стъпка погледни [ТУК](https://www.home-assistant.io/installation/)
+- Home Assistant OS für Hardware oder als virtueller Maschine ist installiert und konfiguriert.Sie sind mit diesem Schritt nicht bereit [Hier](https://www.home-assistant.io/installation/)
 
 
-    - В този проект беше използван "RaspberryPi 4B 8GB" 🔽:
+    - Dieses Projekt wurde verwendet "RaspberryPi 4B 8GB" 🔽:
     <img align="center" src="../../IMG/Devices/RASP PI 4B.png" width="50%" height="50%">
 
 
-- "SONOFF Zigbee 3.0 USB Dongle Plus" или друг, който да създава Zigbee мрежата. Ако все още не разполагате с такъв виж двата линка по долу 🔽:
+- "Sonoff Zigbee 3.0 USB Dongle Plus" oder andere, um das Zigbee -Netzwerk zu erstellen.Wenn Sie immer noch keine haben, sehen Sie die beiden Links unten 🔽:
     - [Amazon](https://www.amazon.de/dp/B09KZX4WSB?ref=ppx_yo2ov_dt_b_fed_asin_title)
     - [Aliexpress](https://de.aliexpress.com/item/1005004266559661.html?spm=a2g0o.productlist.main.1.29cfYELkYELkj7&algo_pvid=d6c4c86f-f945-433c-addd-962a0da0c955&algo_exp_id=d6c4c86f-f945-433c-addd-962a0da0c955-0&pdp_npi=4%40dis%21EUR%2138.16%2120.99%21%21%2140.55%2122.30%21%402103890117306177577828936efd34%2112000028571354347%21sea%21DE%21749630241%21X&curPageLogUid=DHGOVitBimE5&utparam-url=scene%3Asearch%7Cquery_from%3A) 
-    - В този проект беше използван SONOFF Zigbee 3.0 USB Dongle Plus 🔽:
+    - Sonoff Zigbee 3.0 USB Dongle Plus wurde in diesem Projekt verwendet 🔽:
 
     <img align="center" src="../../IMG/Devices/Sonoff zigbee3.0 Dongel.png" width="50%" height="50%">
 
 
-**⚠️ ПРЕПОРАЧИТЕЛНО:** Използвайте  "SONOFF Zigbee 3.0 USB Dongle Plus" със USB удължител. Причината е, че всички Zigbee 3.0 USB Dongle се влияе от работата на хардуера и създава проблеми на мрежата! Ако се колебаете какъв да изберете погледнете линкът по долу. 🔽:
+**⚠️ Empfohlen:** Verwenden Sie "Sonoff Zigbee 3.0 USB Dongle Plus" mit einer USB -Erweiterung.Der Grund dafür ist, dass der gesamte Zigbee 3.0 -USB -Dongle vom Hardware -Betrieb beeinflusst wird und Netzwerkprobleme erzeugt!Wenn Sie zögern, was Sie auswählen möchten, sehen Sie sich den folgenden Link an.🔽:
     - [Aliexpress](https://de.aliexpress.com/item/1005007442670601.html?spm=a2g0o.order_list.order_list_main.75.6e4f5c5f9wWYJ0&gatewayAdapt=glo2deu)
 
  <br>
 
-##  Софтуерна подготовка:
+##  Softwarevorbereitung:
 
-- **Обновяване на Firmware в "SONOFF Zigbee 3.0 USB Dongle Plus":** въпреки, че е съвсем нов обновяването на Firmware е задължително. Така избягвате не-желани проблеми със съвместимостта между добавки или устройства. В линковете по долу ще намерите всичко необходимо за това. 🔽:
-    - [Драивъри:](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) първоначално изтеглете и инсталирайте VCP Drivers на устройство с Windows или MAC, след което рестартирайте операционната система.
-    - [Флаш софтуер:](https://zig-star.com/radio-docs/quick-start/#5have-fun) изтеглете ZigStar и свържете "SONOFF Zigbee 3.0 USB Dongle Plus" към някой от USB портовете.
-    - [Firmware cordinator:](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin) изтеглете най новата версия и я добавете във ZigStar. Виж по долу на картината 🔽:
-    - 
+- **Firmware -Update bei "Sonoff Zigbee 3.0 USB Dongle Plus":** Obwohl ein ganz neues Firmware -Update ein Muss ist.Dies vermeidet nicht entschlossene Probleme mit der Kompatibilität zwischen Zusatzstoffen oder Geräten.In den folgenden Links finden Sie alles, was Sie tun müssen. 🔽:
+    - [Treiber:](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) Laden und installieren Sie zunächst VCP -Treiber auf einem Windows- oder Mac -Gerät und starten Sie das Betriebssystem neu.
+    - [Flash -Software:](https://zig-star.com/radio-docs/quick-start/#5have-fun) Laden Sie Zigstar herunter und verbinden Sie "Sonoff Zigbee 3.0 USB Dongle Plus" an einen der USB -Anschlüsse.
+    - [Firmware cordinator:](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin) Laden Sie die neueste Version herunter und fügen Sie sie zu Zigstar hinzu.Siehe unten das Bild 🔽:
+
         ![image](https://github.com/user-attachments/assets/340206c9-767e-4a19-881d-207f9c098dc4)
 
-    - [Документация:](https://sonoff.tech/wp-content/uploads/2022/11/SONOFF-Zigbee-3.0-USB-dongle-plus-firmware-flashing-.pdf) Официалната документация от SONOFF
+    - [Dokumentation:](https://sonoff.tech/wp-content/uploads/2022/11/SONOFF-Zigbee-3.0-USB-dongle-plus-firmware-flashing-.pdf) Sonoffs offizielle Dokumentation
 
 <p></p><br>
 
-- **Инсталиране на MQTT Broker в Home Assistant:** Ако все още нямате MQTT брокер щракни на бутонът долу. 🔽:
+- **Installieren Sie den MQTT -Broker in Home Assistant:** Wenn Sie den MQTT -Broker immer noch nicht haben, klicken Sie auf die Schaltfläche unten. 🔽:
 
 <br>
 
@@ -47,12 +47,12 @@
 
 <br>
 
-- **След инсталирането включете функцията "Стартиране при зареждане на системата" и рестартирайте Home Assistant. 🔽:**
+- **Schalten Sie nach der Installation die Funktion "Start -up -System" ein und starten Sie den Home -Assistenten neu. 🔽:**
 
     ![image](https://github.com/user-attachments/assets/f950e020-0fc3-42c4-8ab6-977cc5536a72)
 
 
-    - След стартирането на системата отворете конфигурацията на "Mosquitto broker" и преминете в режим "Редактиране в YAML". Заменете всичко с този код 🔽:
+    - Öffnen Sie nach dem Start des Systems die Konfiguration "Mosquitto Broker" und wechseln Sie in den YAML -Bearbeitungsmodus.Ersetzen Sie alles durch diesen Code 🔽:
 
 
     🛠️
@@ -72,11 +72,11 @@
     debug: true
     ```
 
-    ⚠️ На "server" попълнете IP адресът на устройството, където е инсталиран Home Assistant 🔼.
+    ⚠️ Füllen Sie auf "Server" die IP -Adresse des Geräts aus, in dem der Home -Assistent installiert ist 🔼.
 
 
 
-    - Добавете следните редове в "secrets.yaml". Ако това не бъде направено то конфигурацията неможе да бъде валидна 🔽.
+    - Fügen Sie die folgenden Zeilen zu "Secrets.yaml" hinzu.Wenn dies nicht erfolgt, kann die Konfiguration nicht gültig sein 🔽.
 
     🛠️
     ```html
@@ -85,12 +85,12 @@
     mqtt_pass: _____________
     ```
 
-    ⚠️ Попълнете предпочитаните от Вас потребителско име и парола  с тях ще се свързвате с MQTT. Запазете промените и стартирайте "Mosquitto broker". Уверете се, че "Mosquitto broker" е стартирал успешно и продължете с инсталацията на "Zigbee2MQTT"
+    ⚠️ Füllen Sie Ihren bevorzugten Benutzernamen und Ihr Kennwort mit ihnen aus. Sie werden sich an MQTT wenden.Speichern Sie die Änderungen und starten Sie "Mosquitto Broker".Stellen Sie sicher, dass "Mosquitto Broker" erfolgreich begonnen hat und mit der Installation von "Zigbee2MQT" fortgesetzt wird
 
 <br>
 
-- **Инсталиране на Zigbee2MQTT в Home Assistant:**
-    - Натисни бутонът по долу за да добавиш хранилището на Zigbee2MQTT в добавките си 🔽:
+- **Installation von Zigbee2MQTT im Heimassistenten:**
+    - Drücken Sie die Taste unten, um den Zigbee2MQT -Speicher zu Ihren Nahrungsergänzungsmitteln hinzuzufügen 🔽:
 
     <br>
     <div style="margin-bottom: 50px;">
@@ -100,13 +100,13 @@
     </div>
     <br>
 
-    - След добавяне на хранилището обновете страницата и ще намерите следното 🔽:
+    - Aktualisieren Sie nach dem Hinzufügen des Repositorys die Seite und Sie finden Folgendes 🔽:
 
     ![image](https://github.com/user-attachments/assets/5655390c-9c13-473c-b6b6-6993191648dc)
 
-    Отворете и инсталирайте Zigbee2MQTT, след което рестартирайте системата.
+    Öffnen und installieren Sie Zigbee2MQTT und starten Sie das System neu.
 
-    - След стартирането на системата отворете конфигурацията във Zigbee2MQTT и преминете в режим "Редактиране в YAML". Заменете всичко със следният код 🔽:
+    - Öffnen Sie nach dem Start des Systems die Konfiguration in Zigbee2MQTT und wechseln Sie zum YAML -Bearbeitungsmodus.Ersetzen Sie alles durch den folgenden Code 🔽:
 
     <br>
 
@@ -127,14 +127,14 @@
     port: ______________________________________
     ``` 
 
-    ⚠️ На "server:" трябва да добавиш същият ИП адрес, който има и Home Assistant 🔼. На "port:" следвай стъпките по картинката по долу  🔽:
+    ⚠️ Zu "Server:" Sie müssen dieselbe IP -Adresse hinzufügen, die Home Assistant hat 🔼. Von "Port:" Befolgen Sie die Schritte im Bild unten  🔽:
 
     <img align="center" src="../../IMG/GIF/patch_usb_port002.gif">
 
-    Запаметете промените! Отметнете стартиране автоматично със системата и стартирайте добавката 🔽:
+    Speichern Sie die Änderungen!Überprüfen Sie den Start automatisch mit dem System und starten Sie das Hinzufügen -on 🔽:
 
     <img align="center" src="../../IMG/GIF/Zegbee_save_and_start.gif">    
 
 
-### Рестартирайте цялата система, ако добавката не иска да стартира веднага. След рестарта тя ще стартира автоматично.
-### Поздравления вече имате работеща Zibee мрежа !
+### Starten Sie das gesamte System neu, wenn das Add -on nicht sofort beginnen möchte.Nach dem Neustart beginnt es automatisch.
+### Herzlichen Glückwunsch haben bereits ein funktionierendes Zibee -Netzwerk!
