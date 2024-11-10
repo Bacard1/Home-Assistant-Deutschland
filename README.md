@@ -51,12 +51,12 @@ In diesem Speicher werde ich kurz die Idee, den Zweck und die Vorteile jedes Pro
 <img align="center" src="https://github.com/Bacard1/HomeAssistant-Bulgaria/blob/main/Statik/IMG/GIF/Zigbee_Network.gif?raw=true"  alt="Zum Projekt" width="100%" height="90%">
 
 <a href="Statik/Projekts/HomeAssistant-Zigbee-Network">
-    <img align="center" src="https://github.com/Bacard1/HomeAssistant-Bulgaria/blob/main/Statik/IMG/Andere/button_%D0%BA%D1%8A%D0%BC_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.png?raw=true" alt="Към проекта" width="40%" height="40%">
+    <img align="center" src="https://github.com/Bacard1/Home-Assistant-Deutschland/blob/main/Statik/IMG/Andere/button_zum_projekt.png?raw=true" alt="Zum Projekt" width="40%" height="40%">
 </a>
 
 
 <a href="https://www.zigbee2mqtt.io/devices/ZBDongle-E.html">
-    <img align="center" src="https://github.com/Bacard1/HomeAssistant-Bulgaria/blob/main/Statik/IMG/Andere/button_%D0%BE%D1%89%D0%B5_%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F.png?raw=true" alt="Weitere Informationen" width="40%" height="40%">
+    <img align="center" src="https://github.com/Bacard1/Home-Assistant-Deutschland/blob/main/Statik/IMG/Andere/button_noch_info.png?raw=true" alt="Weitere Informationen" width="40%" height="40%">
 </a>
 
 <h1></h1>
@@ -72,8 +72,8 @@ In diesem Speicher werde ich kurz die Idee, den Zweck und die Vorteile jedes Pro
   
 <img align="center" src="https://github.com/Bacard1/HomeAssistant-Bulgaria/blob/main/Statik/IMG/GIF/Projekt_shoplist.gif?raw=true"  alt="Einkaufsliste" width="100%" height="90%">
 
-<a href="https://github.com/Bacard1/HomeAssistant-Bulgaria/tree/main/Statik/Projekts/Home-Assistant-Shoplist">
-    <img align="center" src="https://github.com/Bacard1/HomeAssistant-Bulgaria/blob/main/Statik/IMG/Andere/button_%D0%BA%D1%8A%D0%BC_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.png?raw=true" alt="Към проекта" width="40%" height="40%">
+<a href="https://github.com/Bacard1/Home-Assistant-Deutschland/tree/main/Statik/Projekts/Home-Assistant-Shoplist">
+    <img align="center" src="https://github.com/Bacard1/Home-Assistant-Deutschland/blob/main/Statik/IMG/Andere/button_zum_projekt.png?raw=true" alt="Zum Projekt" width="40%" height="40%">
 </a>
 
 <h1></h1>
