@@ -22,7 +22,7 @@
   
   - Fügen Sie als neue Karte die Liste hinzu, die Sie verwenden werden.🔽::
     
-    ![image](https://github.com/user-attachments/assets/62fe909f-7019-4958-8b1c-4187b441959a)
+    <img align="center" src="https://github.com/user-attachments/assets/62fe909f-7019-4958-8b1c-4187b441959a">
 
     Handbuch hinzufügen Karte 🔽:
     
