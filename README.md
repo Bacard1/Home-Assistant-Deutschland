@@ -5,7 +5,7 @@ In diesem Speicher werde ich kurz die Idee, den Zweck und die Vorteile jedes Pro
 <br>
 <h1 align="center" color="red">Zusammenfassung</h1>
 
-### Der Zweck des Heimassistentenprojekts":
+### Der Zweck des "Home Assistant":
 
 - **Dynamik:** Alle Objekte und Texte müssen in der Lage sein, dem Bildschirm oder Fenster einzuhalten und eine bequeme Ansicht innerhalb der zulässigen Grenzen beizubehalten.
 - **Vereinfachtes und enges Design:** Leicht zu verstehen von Erwachsenen und Kindern.Schnelle Links zu Schlüsselfunktionen und Informationen zum Reduzieren von Seitenverbindungen durch Pop-up-Windows für eine bessere Navigation.
