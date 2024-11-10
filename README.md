@@ -1,11 +1,11 @@
-<h1 align="center">Home Assistant България</h1>
+<h1 align="center">Home Assistant Deutchland</h1>
 
 Im Folgenden werde ich mein Projekt "Home Assistant" präsentieren und es in Teile teilen und als separate Mini-Projekte präsentieren.
 In diesem Speicher werde ich kurz die Idee, den Zweck und die Vorteile jedes Projekts erklären.Wenn einer von ihnen für Sie von Interesse ist, können Sie die Verbindung zu dem vollständigen Projekt unter jeder Beschreibung folgen.
 <br>
-<h1 align="center" color="red">Обобщение</h1>
+<h1 align="center" color="red">Zusammenfassung</h1>
 
-### Цел на проекта "Home Assistant":
+### Der Zweck des Heimassistentenprojekts":
 
 - **Dynamik:** Alle Objekte und Texte müssen in der Lage sein, dem Bildschirm oder Fenster einzuhalten und eine bequeme Ansicht innerhalb der zulässigen Grenzen beizubehalten.
 - **Vereinfachtes und enges Design:** Leicht zu verstehen von Erwachsenen und Kindern.Schnelle Links zu Schlüsselfunktionen und Informationen zum Reduzieren von Seitenverbindungen durch Pop-up-Windows für eine bessere Navigation.
